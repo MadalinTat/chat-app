@@ -1,17 +1,9 @@
 import os
-import time
-#import logging
-#from collections import deque
-#from typing import Dict, List
-#import chromadb
-#from chromadb.api.types import Documents, EmbeddingFunction, Embeddings
-#import re
 import chainlit as cl
 import langchain
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
 from dotenv import load_dotenv
-#from chromadb.config import Settings
 
 load_dotenv()
 
@@ -25,7 +17,7 @@ llm =   HuggingFaceHub(huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
 
 template = """Question: {question}
 
-Answer: Let's give you an well-informed answer."""
+Answer: Let's give you a well-informed answer."""
 
 @cl.on_chat_start
 async def main():
