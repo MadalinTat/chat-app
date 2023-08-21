@@ -23,7 +23,7 @@ Answer: Let's give you a well-informed answer."""
 async def main():
     #Instantiate the chain for the user
     elements = [
-    cl.Image(name='falcon-llm.jpeg', display='inline', path='/home/madalintat/chat-app/falcon-llm.jpeg')
+    cl.Image(name='falcon-llm.jpeg', display='inline', path='../falcon7b-instruct-chat/falcon-llm.jpeg')
     ]
     await cl.Message(content="Hello there, I am Falcon 7b Instruct. How can I help you?", elements=elements).send()
     prompt = PromptTemplate(template=template, input_variables=['question'])
