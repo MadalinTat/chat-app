@@ -43,6 +43,7 @@ Read more about the Falcon model: [link](https://falconllm.tii.ae/)
 I am planning to work more on this app:
 - [ ] Extend the capabilities of Langchain 🦜
 - [ ] Extra UI features 🕹️
+- [ ] Implement [ChromaDB](https://docs.trychroma.com/) 💾
 - [ ] Ability to create tasks and complete them 📝 [BabyAGI inspired](https://github.com/yoheinakajima/babyagi/)
 - [ ] Blog post about how I built and thought through everything ✏️
 - [ ] Fine-tune Falcon 7b 🪇
