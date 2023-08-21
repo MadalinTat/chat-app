@@ -4,4 +4,7 @@ This a prototype for chatting with Falcon.
 
 ![Falcon model](falcon-llm.jpeg)
 
-## Time to chat, play, and improve!
+## Start by asking Falcon any questions.
+
+More features are coming soon.
+
