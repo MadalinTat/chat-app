@@ -21,7 +21,6 @@ Answer: Let's give you a well-informed answer."""
 
 @cl.on_chat_start
 async def main():
-    #Instantiate the chain for the user
     elements = [
     cl.Image(name='falcon-llm.jpeg', display='inline', path='../falcon7b-instruct-chat/falcon-llm.jpeg')
     ]
@@ -29,20 +28,14 @@ async def main():
     prompt = PromptTemplate(template=template, input_variables=['question'])
     llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=True)
 
-    #Store the chain in the user session
     cl.user_session.set('llm_chain', llm_chain)
 
 @cl.on_message
 async def main(message: str):
-    #Retrieve the chain from the user session
     llm_chain = cl.user_session.get('llm_chain')
 
-    #Call the chain asynchronously
     res = await llm_chain.acall(message, callbacks=[cl.AsyncLangchainCallbackHandler()])
 
-    #Post processing here
-
-    #Send the response
     await cl.Message(content=res['text']).send()
 
 
